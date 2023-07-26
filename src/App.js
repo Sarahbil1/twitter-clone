@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import ListView from './ListView';
+import Tweets from './Tweets';
+import Composer from './Composer';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <ListView/>
+
+      <div className="main">
+        <Tweets/>
+        <div className="feed">
+          <Composer/>
+        </div>
+      </div>
     </div>
-  );
-}
+  );  
+};
 
 export default App;
+
